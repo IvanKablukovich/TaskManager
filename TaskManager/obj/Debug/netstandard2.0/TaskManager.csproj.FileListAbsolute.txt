@@ -5,10 +5,8 @@ A:\Progs\VisualStudio\projects\TaskManager\TaskManager\bin\Debug\netstandard2.0\
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.csprojAssemblyReference.cache
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\App.xaml.g.cs
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.csproj.CoreCompileInputs.cache
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.AssemblyInfoInputs.cache
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.AssemblyInfo.cs
-A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\XamlC.stamp
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\ref\TaskManager.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.pdb
