@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "eWlQ6Sh5eWK0pgQWT9HkPoth36QQppS/HySem7T0BcDrgUsx6tYq6koUpw/1YbtGjs7cH+v+UBu0c3BlacTwtg==",
+  "dgSpecHash": "6tlvcGP9Jne/z827Idsbb4p8n9YltwGHVQYj+JOEcwidqH8nflMBMCp3Br4VcsUIUbQtLdkt3OKlCfUeQ1m4HQ==",
   "success": true,
   "projectFilePath": "A:\\Progs\\VisualStudio\\projects\\TaskManager\\TaskManager.Android\\TaskManager.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\вп\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\1.1.13\\sqlitepclraw.lib.e_sqlite3.android.1.1.13.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3.android\\1.1.13\\sqlitepclraw.provider.e_sqlite3.android.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "A:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "A:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

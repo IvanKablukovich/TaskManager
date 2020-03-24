@@ -10,3 +10,4 @@ A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\ref\TaskManager.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.pdb
+A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\Views\SignUpPage.xaml.g.cs

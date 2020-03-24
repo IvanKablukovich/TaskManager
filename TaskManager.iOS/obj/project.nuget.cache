@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "fiQWRAYka8sUS/vqxuoqKyT8dvgCyYhrgo+VksTMUEnNiMj7vBX1M+06jDPXgsYF+b687CCCxQat2aWmAb6a+A==",
+  "dgSpecHash": "MBnKU9EUbYXDRRDbp6pv6Xz8w1wUj1Nb3vsT0QXDqoWk6cAVyty/lNWBRxvS2cEgeWsUtbYLzK/8/xl17kxIhg==",
   "success": true,
   "projectFilePath": "A:\\Progs\\VisualStudio\\projects\\TaskManager\\TaskManager.iOS\\TaskManager.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\вп\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.13\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "A:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "A:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
