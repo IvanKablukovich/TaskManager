@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                <Grid Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -26,7 +26,13 @@
                         <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword"/>
                     </StackLayout>
                     <StackLayout Grid.Row="3">
-                        <Button Text="Register" HorizontalOptions="CenterAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="Purple" Clicked="Button_Clicked"/>
+                        <Button Text="Register"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="100"
+                                TextColor="White" 
+                                BackgroundColor="#FF3A0F99" 
+                                Clicked="Button_Clicked"
+                                CornerRadius="20"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>
