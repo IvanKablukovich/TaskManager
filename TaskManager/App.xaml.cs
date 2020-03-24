@@ -1,4 +1,5 @@
 ﻿using System;
+using TaskManager.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace TaskManager
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignUpPage();
         }
 
         protected override void OnStart()
