@@ -11,7 +11,7 @@ namespace TaskManager
         {
             InitializeComponent();
 
-            MainPage = new SignUpPage();
+            MainPage = new SignInPage();
         }
 
         protected override void OnStart()
