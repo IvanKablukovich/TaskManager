@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TaskManager.Views.TasksPage.xaml", "Views/TasksPage.xaml", typeof(global::TaskManager.Views.TasksPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("TaskManager.Views.TaskInfoPage.xaml", "Views/TaskInfoPage.xaml", typeof(global::TaskManager.Views.TaskInfoPage))]
 
 namespace TaskManager.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\TasksPage.xaml")]
-    public partial class TasksPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\TaskInfoPage.xaml")]
+    public partial class TaskInfoPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TasksPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TaskInfoPage));
         }
     }
 }

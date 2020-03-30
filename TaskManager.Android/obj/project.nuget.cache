@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6tlvcGP9Jne/z827Idsbb4p8n9YltwGHVQYj+JOEcwidqH8nflMBMCp3Br4VcsUIUbQtLdkt3OKlCfUeQ1m4HQ==",
+  "dgSpecHash": "OgWndK4brWKl+8PvnjEGthk7VneBrPZ70UAC2b1JASOUu8GnAkEz/gCcuzXT8MYwGxuTRLNryRiNQyrk1+yupg==",
   "success": true,
   "projectFilePath": "A:\\Progs\\VisualStudio\\projects\\TaskManager\\TaskManager.Android\\TaskManager.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\вп\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\1.1.13\\sqlitepclraw.lib.e_sqlite3.android.1.1.13.nupkg.sha512",

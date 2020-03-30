@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MBnKU9EUbYXDRRDbp6pv6Xz8w1wUj1Nb3vsT0QXDqoWk6cAVyty/lNWBRxvS2cEgeWsUtbYLzK/8/xl17kxIhg==",
+  "dgSpecHash": "HByYoYoYOyTyikNw8Y0IYQeOsdJP92+dS/iYYuAtsgRF8Ul7P7lrMQM9gr5NpK9vdUaGaVWfTfKSO+UlvB75ng==",
   "success": true,
   "projectFilePath": "A:\\Progs\\VisualStudio\\projects\\TaskManager\\TaskManager.iOS\\TaskManager.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\вп\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\вп\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
     "C:\\Users\\вп\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.13\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.13.nupkg.sha512",
