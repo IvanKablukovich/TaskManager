@@ -4,5 +4,6 @@
     <SelectedDevice>myPhone _CUBE_LTE</SelectedDevice>
     <DefaultDevice>nexus_5_pie_9_0_-_api_28</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

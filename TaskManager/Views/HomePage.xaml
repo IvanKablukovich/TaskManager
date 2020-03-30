@@ -9,12 +9,30 @@ x:Class="TaskManager.Views.HomePage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log Out"
 
-IconImageSource="ic_action_more_vert.png"
-Order="Secondary"
-Priority="0"
-Clicked="ToolbarItem_Clicked"/>
+              IconImageSource="ic_action_more_vert.png"
+              Order="Secondary"
+              Priority="0"
+              Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
-
-    <Image Source="PepePls.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-
+    <StackLayout>
+        <ListView x:Name="usersList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Title}" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Image Source="pepeC.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Create New Task"                
+                TextColor="White"          
+                BackgroundColor="#FF3A0F99"                   
+                CornerRadius="20"
+                Clicked="CreateTask" />
+    </StackLayout>
 </ContentPage>

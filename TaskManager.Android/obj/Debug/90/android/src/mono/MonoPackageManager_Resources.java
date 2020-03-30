@@ -4,7 +4,9 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "TaskManager.Android.dll" comes first in this list. */
 		"TaskManager.Android.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
+		"SQLiteNetExtensions.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

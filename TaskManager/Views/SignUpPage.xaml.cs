@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TaskManager.Tables;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,10 +18,15 @@ namespace TaskManager.Views
         {
             InitializeComponent();
         }
-
-        void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-           App.Current.MainPage = new NavigationPage(new SignInPage());
+            var user = (User)BindingContext;
+            if (!String.IsNullOrEmpty(user.Name))
+            {
+                App.Database.SaveItem(user);
+            }
+            //this.Navigation.PopAsync();
+            App.Current.MainPage = new NavigationPage(new SignInPage());
         }
     }
 }
