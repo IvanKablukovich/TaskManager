@@ -16,3 +16,4 @@ A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\Views\TaskInfoPage.xaml.g.cs
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\TaskManager.csproj.CoreCompileInputs.cache
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\XamlC.stamp
+A:\Progs\VisualStudio\projects\TaskManager\TaskManager\obj\Debug\netstandard2.0\Views\CreateCommentPage.xaml.g.cs

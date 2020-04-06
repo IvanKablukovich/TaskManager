@@ -5,29 +5,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TaskManager.Views.SignUpPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#3A0F99" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="CornerRadius" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
-                     <StackLayout Grid.Row="0">
-                        <Entry Text="{Binding Name}" Placeholder="Name" FontSize="16" x:Name="EntryUserName"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="1">
-                        <Entry Text="{Binding Email}" Placeholder="Email" FontSize="16" x:Name="EntryUserEmail"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="2">
-                        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="3">
-                        <Button Text="Register"
-                                HorizontalOptions="CenterAndExpand"
-                                WidthRequest="100"
-                                TextColor="White" 
-                                BackgroundColor="#FF3A0F99" 
-                                Clicked="Button_Clicked"
-                                CornerRadius="20"/>
-                    </StackLayout>
-                </Grid>
+            <StackLayout Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
+                <StackLayout >
+                    <Entry Text="{Binding Name}" Placeholder="Name" Style="{StaticResource entryStyle}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Entry Text="{Binding Email}" Placeholder="Email" x:Name="EntryEmail" Style="{StaticResource entryStyle}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" Style="{StaticResource entryStyle}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Button Text="Register" Command="{Binding SaveUserCommand}" Style="{StaticResource buttonStyle}"/>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

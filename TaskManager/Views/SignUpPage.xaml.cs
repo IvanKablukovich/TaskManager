@@ -5,9 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskManager.Tables;
+using TaskManager.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Text.RegularExpressions;
+using TaskManager.ViewsModels;
 
 namespace TaskManager.Views
 {
@@ -16,17 +18,27 @@ namespace TaskManager.Views
     {
         public SignUpPage()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
+
+            this.BindingContext = new SignUpViewModel();
         }
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            var user = (User)BindingContext;
-            if (!String.IsNullOrEmpty(user.Name))
-            {
-                App.Database.SaveItem(user);
-            }
-            //this.Navigation.PopAsync();
-            App.Current.MainPage = new NavigationPage(new SignInPage());
-        }
+        //private void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    var email = EntryEmail.Text;
+        //    var emailCheck = "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$";
+
+
+        //    var user = (User)BindingContext;
+        //    if (!String.IsNullOrWhiteSpace(user.Name) && Regex.IsMatch(email, emailCheck))
+        //    {
+        //        App.Database.SaveItem(user);
+        //        App.Current.MainPage = new NavigationPage(new SignInPage());
+        //    }
+        //    else
+        //    {
+        //        var result = this.DisplayAlert("Oops", "Failed", "Ok", "Cancel");
+        //    }
+        //}
     }
 }

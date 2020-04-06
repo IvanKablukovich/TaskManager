@@ -6,16 +6,26 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 x:Class="TaskManager.Views.HomePage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#3A0F99" />
+                <Setter Property="CornerRadius" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log Out"
-
               IconImageSource="ic_action_more_vert.png"
               Order="Secondary"
               Priority="0"
               Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
+    
     <StackLayout>
-        <ListView x:Name="usersList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+        <ListView x:Name="usersList" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -28,11 +38,7 @@ x:Class="TaskManager.Views.HomePage">
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Image Source="pepeC.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-        <Button Text="Create New Task"                
-                TextColor="White"          
-                BackgroundColor="#FF3A0F99"                   
-                CornerRadius="20"
-                Clicked="CreateTask" />
+        <!--<Image Source="pepeC.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>-->
+        <Button Text="Create New Task" Command="{Binding CreateTaskCommand}" Style="{StaticResource buttonStyle}"/>
     </StackLayout>
 </ContentPage>
