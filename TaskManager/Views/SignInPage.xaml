@@ -11,33 +11,30 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="BackgroundColor" Value="#3A0F99" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="WidthRequest" Value="100" />
                 <Setter Property="CornerRadius" Value="20" />
+            </Style>
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="FontSize" Value="16" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
-
-                    <StackLayout Grid.Row="0">
-                        <Entry Placeholder="UserName"                               
-                               FontSize="16" 
-                               x:Name="EntryUserName"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="1">
-                        <Entry Placeholder="Password"
-                               FontSize="16" 
-                               x:Name="EntryUserPassword" />
-                    </StackLayout>
-                    <StackLayout Grid.Row="2">
-                        <Button Text="Sign In" Style="{StaticResource buttonStyle}" Clicked="SignInButton_Clicked"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="3">
-                        <Button Text="Sign Up" Style="{StaticResource buttonStyle}" BackgroundColor="Transparent" TextColor="#3A0F99" Clicked="SignUpButton_Clicked"/>
-                    </StackLayout>
-                </Grid>
+            <StackLayout Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
+                <StackLayout >
+                    <Entry Text="{Binding Name}" Placeholder="UserName" x:Name="EntryUserName" Style="{StaticResource entryStyle}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password" x:Name="EntryUserPassword" Style="{StaticResource entryStyle}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Button Text="Sign In" Style="{StaticResource buttonStyle}" Command="{Binding SignInCommand}"/>
+                </StackLayout>
+                <StackLayout >
+                    <Button Text="Sign Up" Command="{Binding SignUpCommand}" Style="{StaticResource buttonStyle}" BackgroundColor="Transparent" TextColor="#3A0F99" />
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

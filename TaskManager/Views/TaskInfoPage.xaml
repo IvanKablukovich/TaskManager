@@ -14,20 +14,42 @@
                 <Setter Property="WidthRequest" Value="100" />
                 <Setter Property="CornerRadius" Value="20" />
             </Style>
+            <Style x:Key="textStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <Label Text="Title" />
-        <Entry Text="{Binding Title}" />
-        <Label Text="Description" />
-        <Entry Text="{Binding Description}" />
-        <Label Text="Status" />
-        <Entry Text="{Binding Status}" />
-        <Label Text="Creator" />
-        <Entry Text="{Binding Created_by}" />
+
+        <Label Text="{Binding Title}" Style="{StaticResource textStyle}" HorizontalOptions="CenterAndExpand" FontSize="22"/>
+        <Label Text="Description:" Style="{StaticResource textStyle}"/>
+        <Label Text="{Binding Description}" />
+        <Label Text="Status:" Style="{StaticResource textStyle}"/>
+        <Label Text="{Binding Status}" />
+        <Label Text="Creator:" Style="{StaticResource textStyle}"/>
+        <Label Text="{Binding Created_by}" />
+
+        <Label Text="Comments" Style="{StaticResource textStyle}" HorizontalOptions="CenterAndExpand" FontSize="22"/>
+        <ListView x:Name="commentsList" ItemsSource="{Binding Comments}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding UserName}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding Field}" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
         <StackLayout Orientation="Horizontal">
-            <Button Text="Delete" Clicked="DeleteTask" Style="{StaticResource buttonStyle}" />
-            <Button Text="Change" Clicked="EditTask" Style="{StaticResource buttonStyle}" />
+            <Button Text="Delete" Command="{Binding DeleteTaskCommand}" Style="{StaticResource buttonStyle}" />
+            <Button Text="Comment" Command="{Binding CreateCommentCommand}" Style="{StaticResource buttonStyle}"/>
+            <!--<Button Text="Change" Clicked="EditTask" Style="{StaticResource buttonStyle}" />-->
         </StackLayout>
     </StackLayout>
 </ContentPage>

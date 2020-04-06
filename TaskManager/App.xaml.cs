@@ -4,7 +4,7 @@ using System.Reflection;
 using TaskManager.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using TaskManager.Tables;
+using TaskManager.Models;
 
 namespace TaskManager
 {
@@ -30,7 +30,7 @@ namespace TaskManager
         {
             InitializeComponent();
 
-            MainPage = new SignInPage();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()

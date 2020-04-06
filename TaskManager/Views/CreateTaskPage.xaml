@@ -22,12 +22,19 @@
         <Label Text="Description" />
         <Entry Text="{Binding Description}" />
         <Label Text="Status" />
-        <Entry Text="{Binding Status}" />
+        <Picker x:Name="picker" SelectedItem="{Binding Status}">
+            <Picker.Items>
+                <x:String>To Do</x:String>
+                <x:String>In Progress</x:String>
+                <x:String>In Review</x:String>
+                <x:String>Done</x:String>
+            </Picker.Items>
+        </Picker>
         <Label Text="Creator" />
         <Entry Text="{Binding Created_by}" />
         <StackLayout Orientation="Horizontal">
-            <Button Text="Save" Clicked="SaveTask" Style="{StaticResource buttonStyle}"/>
-            <Button Text="Cancel" Clicked="Cancel" Style="{StaticResource buttonStyle}"/>
+            <Button Text="Save" Command="{Binding SaveTaskCommand}" Style="{StaticResource buttonStyle}"/>
+            <Button Text="Cancel" Command="{Binding BackCommand}" Style="{StaticResource buttonStyle}"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
