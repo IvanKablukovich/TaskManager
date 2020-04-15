@@ -4,11 +4,28 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TaskManager.Models;
+using System.IO;
 
 namespace TaskManager
 {
     public class DBRepository
     {
+
+        private static DBRepository instance;
+
+        private DBRepository()
+        { }
+
+        public static DBRepository getInstance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DBRepository(Path.Combine(
+                                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "User1234.db"));
+                return instance;
+            }
+        }
 
         SQLiteConnection database;
         public DBRepository(string databasePath)
@@ -28,10 +45,20 @@ namespace TaskManager
             //return database.Table<Comment>().ToList();
             return database.Table<Comment>().Where(i => i.IdTask == id).ToList();
         }
-        public Task GetItem(int id)
+
+        public IEnumerable<User> GetUserByName(string name)
         {
-            return database.Get<Task>(id);
+            return database.Table<User>().Where(u => u.Name.Equals(name));
         }
+
+        public object CheckUser(string Name,string Password)
+        { 
+            return database.Table<User>().Where(u => u.Name.Equals(Name) && u.Password.Equals(Password)).FirstOrDefault();
+        }
+        //public Task GetItem(int id)
+        //{
+        //    return database.Get<Task>(id);
+        //}
         public int DeleteItem(int id)
         {
             return database.Delete<Task>(id);
@@ -53,7 +80,7 @@ namespace TaskManager
         {
             if (item.TaskId != 0)
             {
-                database.UpdateWithChildren(item);
+                database.Update(item);
                 return item.TaskId;
             }
             else

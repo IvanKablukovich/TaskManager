@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using TaskManager.Models;
@@ -12,11 +14,13 @@ namespace TaskManager.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateTaskPage : ContentPage
     {
-        public CreateTaskPage()
+       // public User user { get; private set; }
+        public CreateTaskPage(User currentUser)
         {
             InitializeComponent();
             //this.BindingContext = new Task();
-            this.BindingContext = new CreateTaskViewModel();
+           // user = currentUser;
+            this.BindingContext = new CreateTaskViewModel(currentUser);
         }
         //private void SaveTask(object sender, EventArgs e)
         //{

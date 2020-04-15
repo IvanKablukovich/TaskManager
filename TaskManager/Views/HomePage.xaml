@@ -4,7 +4,8 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
-x:Class="TaskManager.Views.HomePage">
+x:Class="TaskManager.Views.HomePage"
+             Title ="Task Manager">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -23,22 +24,27 @@ x:Class="TaskManager.Views.HomePage">
               Priority="0"
               Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
-    
+
     <StackLayout>
-        <ListView x:Name="usersList" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" HasUnevenRows="True">
+        <ListView x:Name="usersList" ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}" HasUnevenRows="True" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Title}" FontSize="Medium" />
-                            </StackLayout>
-                        </ViewCell.View>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Title}" FontSize="22" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#3A0F99"/>
+                            <Label Text="{Binding Description}" FontSize="18"/>
+                            <Image Source="{Binding Image}" x:Name="xfImage" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Text="{Binding Status}" FontSize="18" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout Margin="10">
+                    <Button Text="Create New Task" Command="{Binding CreateTaskCommand}" Style="{StaticResource buttonStyle}"/>
+                </StackLayout>
+            </ListView.Footer>
         </ListView>
         <!--<Image Source="pepeC.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>-->
-        <Button Text="Create New Task" Command="{Binding CreateTaskCommand}" Style="{StaticResource buttonStyle}"/>
     </StackLayout>
 </ContentPage>

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using TaskManager.Models;
 using TaskManager.ViewsModels;
 using Xamarin.Forms;
@@ -15,17 +16,19 @@ namespace TaskManager.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        public HomePage()
+        public User currentUser { get; private set; }
+        public HomePage(User user)
         {
             InitializeComponent();
-            this.BindingContext = new HomePageViewModel();
+            currentUser = user;
+            //this.BindingContext = new HomePageViewModel();
         }
 
-        //protected override void OnAppearing()
-        //{
-        //    usersList.ItemsSource = App.Database.GetTasks();
-        //    base.OnAppearing();
-        //}
+        protected override void OnAppearing()
+        {
+            this.BindingContext = new HomePageViewModel(currentUser);
+            base.OnAppearing();
+        }
 
         //private async void CreateTask(object sender, EventArgs e)
         //{

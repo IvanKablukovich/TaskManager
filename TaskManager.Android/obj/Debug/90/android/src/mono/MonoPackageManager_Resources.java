@@ -3,8 +3,11 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "TaskManager.Android.dll" comes first in this list. */
 		"TaskManager.Android.dll",
+		"DocumentFormat.OpenXml.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.FilePicker.dll",
+		"Rg.Plugins.Popup.dll",
 		"SQLite-net.dll",
 		"SQLiteNetExtensions.dll",
 		"SQLitePCLRaw.batteries_green.dll",
@@ -12,6 +15,7 @@ public class MonoPackageManager_Resources {
 		"SQLitePCLRaw.core.dll",
 		"SQLitePCLRaw.lib.e_sqlite3.dll",
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
+		"System.IO.Packaging.dll",
 		"TaskManager.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
