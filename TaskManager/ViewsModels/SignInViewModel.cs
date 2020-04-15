@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using TaskManager.Models;
 using TaskManager.Views;
@@ -20,38 +19,37 @@ namespace TaskManager.ViewsModels
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand SignInCommand { protected set; get; }
         public ICommand SignUpCommand { protected set; get; }
-
-        //public INavigation Navigation { get; set; }
         public User user { get; set; }
 
         public SignInViewModel()
         {
             SignInCommand = new Command(SignIn);
             SignUpCommand = new Command(SignUp);
-            //Navigation = App.Current.MainPage.Navigation;
             user = new User();
         }
 
         private void SignUp()
         {
-            //User user = new User();
-            // SignUpPage signupPage = new SignUpPage();
-            //signupPage.BindingContext = user;
-            Preferences.Set("un",user.Name);
             App.Current.MainPage.Navigation.PushAsync(new SignUpPage());
-            //App.Current.MainPage = new NavigationPage(new SignUpPage());
         }
 
         private void SignIn()
         {
-            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "User.db");
-            var db = new SQLiteConnection(dbpath);
+            //var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "User.db");
+            //var db = new SQLiteConnection(dbpath);
 
-            var myquery = db.Table<User>().Where(u => u.Name.Equals(Name) && u.Password.Equals(Password)).FirstOrDefault();
+            var my = DBRepository.getInstance.CheckUser(Name, Password);
+            //var myquery = db.Table<User>().Where(u => u.Name.Equals(Name) && u.Password.Equals(Password)).FirstOrDefault();
 
-            if (myquery != null)
+            if (my != null)
             {
-                App.Current.MainPage = new NavigationPage(new HomePage());
+                //var us = from Users in db.Table<User>()
+                //            where Users.Name.Equals(Name)
+                //            select Users;
+                //var userQuery = db.Query<User>("SELECT * FROM Users WHERE Name = ?", Name);
+                var userQuery = DBRepository.getInstance.GetUserByName(Name);
+                User currentUser = userQuery.ElementAt(0);
+                App.Current.MainPage = new NavigationPage(new HomePage(currentUser));
             }
             else
             {
@@ -68,7 +66,7 @@ namespace TaskManager.ViewsModels
             {
                 if (user.Name != value)
                 {
-                    user.Name = value;
+                    user.Name = value; 
                     OnPropertyChanged("Name");
                 }
             }

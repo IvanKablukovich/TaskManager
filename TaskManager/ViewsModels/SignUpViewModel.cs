@@ -27,10 +27,10 @@ namespace TaskManager.ViewsModels
             var email = Email;
             var emailCheck = "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$";
 
-            //var user = (User)BindingContext;
             if (!String.IsNullOrEmpty(user.Name) && Regex.IsMatch(email, emailCheck))
             {
-                App.Database.SaveItem(user);
+                //user.Role = true;
+                DBRepository.getInstance.SaveItem(user);
                 App.Current.MainPage = new NavigationPage(new SignInPage());
             }
             else
