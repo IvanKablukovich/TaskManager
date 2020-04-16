@@ -18,7 +18,7 @@ namespace TaskManager.ViewsModels
         public ICommand SaveTaskCommand { protected set; get; }
         public ICommand BackCommand { protected set; get; }
         public ICommand SelectImageCommand { protected set; get; }
-        //public ICommand SelectFileCommand { protected set; get; }
+        public ICommand SelectFileCommand { protected set; get; }
         public Task task { get; set; }
         public User user { get; set; }
 
@@ -26,7 +26,7 @@ namespace TaskManager.ViewsModels
         {
             user = currentUser;
             SelectImageCommand = new Command(SelectImage);
-            //SelectFileCommand = new Command(SelectFile);
+            SelectFileCommand = new Command(SelectFile);
             BackCommand = new Command(Back);
             SaveTaskCommand = new Command(SaveTask);
             task = new Task();
@@ -34,7 +34,8 @@ namespace TaskManager.ViewsModels
 
         private async void SelectImage()
         {
-            var im = await CrossFilePicker.Current.PickFile();
+            string[] allowedTypes = { "image/*" };
+            var im = await CrossFilePicker.Current.PickFile(allowedTypes);
 
             if (im != null)
             {
@@ -44,17 +45,19 @@ namespace TaskManager.ViewsModels
                 task.ImageName = im.FileName;
             }
         }
-        //private async void SelectFile()
-        //{
-        //    var file = await CrossFilePicker.Current.PickFile();
+        private async void SelectFile()
+        {
+            string[] allowedTypes = { "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
+            var file = await CrossFilePicker.Current.PickFile(allowedTypes);
 
-        //    if (file != null)
-        //    {
-        //       // byte[] b = File.ReadAllBytes(file.FilePath);
-        //        task.File = file.FilePath;
-        //        task.FileName = file.FileName;
-        //    }
-        //}
+            if (file != null)
+            {
+                //byte[] b = File.ReadAllBytes(file.FilePath);
+                //String s = Convert.ToBase64String(b);
+                task.File = file.FilePath;
+                task.FileName = file.FileName;
+            }
+        }
         private void Back()
         {
            App.Current.MainPage = new NavigationPage(new HomePage(user));
@@ -110,15 +113,15 @@ namespace TaskManager.ViewsModels
             }
         }
 
-        public string ImageName
+        public string FileName
         {
-            get { return task.ImageName; }
+            get { return task.FileName; }
             set
             {
-                if (task.ImageName != value)
+                if (task.FileName != value)
                 {
-                    task.ImageName = value;
-                    OnPropertyChanged("ImageName");
+                    task.FileName = value;
+                    OnPropertyChanged("FileName");
                 }
             }
         }

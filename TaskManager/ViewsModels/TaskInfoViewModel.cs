@@ -24,7 +24,7 @@ namespace TaskManager.ViewsModels
         public ICommand DeleteTaskCommand { protected set; get; }
         public ICommand EditTaskCommand { protected set; get; }
         public ICommand TapImageCommand { protected set; get; }
-        //public ICommand TapFileCommand { protected set; get; }
+        public ICommand TapFileCommand { protected set; get; }
         public Comment comment { get; set; }
         public Task Task { get; private set; }
         public User User { get; private set; }
@@ -34,7 +34,7 @@ namespace TaskManager.ViewsModels
             Task = selectedTask;
             Comments = new ObservableCollection<Comment>(DBRepository.getInstance.GetComments(selectedTask.TaskId));
             TapImageCommand = new Command(TapImage);
-            //TapFileCommand = new Command(TapFile);
+            TapFileCommand = new Command(TapFile);
             EditTaskCommand = new Command(EditTask);
             CreateCommentCommand = new Command(CreateComment);
             DeleteTaskCommand = new Command(DeleteTask);
@@ -42,25 +42,24 @@ namespace TaskManager.ViewsModels
 
         }
 
-        //private async void TapFile()
-        //{
-            
-        //    //var file = new MemoryStream(Task.File);
-        //    //using (WordprocessingDocument wordDocument = WordprocessingDocument.Open(file, true))
-        //    //{
-        //    //}
+        private async void TapFile()
+        {
+
+            //var file = new MemoryStream(Task.File);
+            //using (WordprocessingDocument wordDocument = WordprocessingDocument.Open(file, true))
+            //{
+            //}
 
 
-        //    //xfImage.Source = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
-        //    //byte[] newBytes = Convert.FromBase64String(Task.File);
-        //    //var fn = BitConverter.ToString(newBytes); ;
-        //    //var file = Path.Combine(FileSystem.CacheDirectory, fn);
-        //    //await Launcher.OpenAsync(new OpenFileRequest
-        //    //{
-        //    //    File = new ReadOnlyFile(file)
-        //    //});
-        //    await Launcher.TryOpenAsync(Task.File);
-        //}
+            //xfImage.Source = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
+            //byte[] newBytes = Convert.FromBase64String(Task.File);
+            //var fn = BitConverter.ToString(Tas); 
+            var file = Path.Combine(FileSystem.CacheDirectory, Task.File);
+            await Launcher.OpenAsync(new OpenFileRequest
+            {
+                File = new ReadOnlyFile(file)
+            });
+        }
         private async void TapImage()
         {
             await PopupNavigation.Instance.PushAsync(new ImagePage(Task.Image));
@@ -155,18 +154,18 @@ namespace TaskManager.ViewsModels
                 }
             }
         }
-        //public string FileName
-        //{
-        //    get { return Task.FileName; }
-        //    set
-        //    {
-        //        if (Task.FileName != value)
-        //        {
-        //            Task.FileName = value;
-        //            OnPropertyChanged("FileName");
-        //        }
-        //    }
-        //}
+        public string FileName
+        {
+            get { return Task.FileName; }
+            set
+            {
+                if (Task.FileName != value)
+                {
+                    Task.FileName = value;
+                    OnPropertyChanged("FileName");
+                }
+            }
+        }
         public string Field
         {
             get { return comment.Field; }

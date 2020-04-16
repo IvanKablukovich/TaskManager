@@ -19,9 +19,5 @@
     </pages:PopupPage.Animation>
     <StackLayout Margin="20"  BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
         <Image  x:Name="xImage" Aspect="AspectFill"/>
-
-        <!--<Label Text="OK" TextColor="Red"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />-->
     </StackLayout>
 </pages:PopupPage>
