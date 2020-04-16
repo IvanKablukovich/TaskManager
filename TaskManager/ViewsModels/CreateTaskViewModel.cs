@@ -43,11 +43,12 @@ namespace TaskManager.ViewsModels
                 String s = Convert.ToBase64String(b);
                 task.Image = s;
                 task.ImageName = im.FileName;
+                await App.Current.MainPage.DisplayAlert("Picked Image: ", im.FileName, "Ok");
             }
         }
         private async void SelectFile()
         {
-            string[] allowedTypes = { "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
+            string[] allowedTypes = { "application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application / vnd.openxmlformats - officedocument.spreadsheetml.sheet" };
             var file = await CrossFilePicker.Current.PickFile(allowedTypes);
 
             if (file != null)
@@ -56,6 +57,7 @@ namespace TaskManager.ViewsModels
                 //String s = Convert.ToBase64String(b);
                 task.File = file.FilePath;
                 task.FileName = file.FileName;
+                await App.Current.MainPage.DisplayAlert("Picked document: ", file.FileName, "Ok");
             }
         }
         private void Back()
@@ -84,7 +86,7 @@ namespace TaskManager.ViewsModels
                 if (task.Title != value)
                 {
                     task.Title = value;
-                    OnPropertyChanged("Title");
+                    OnPropertyChanged(nameof(Title));
                 }
             }
         }
@@ -96,7 +98,7 @@ namespace TaskManager.ViewsModels
                 if (task.Description != value)
                 {
                     task.Description = value;
-                    OnPropertyChanged("Description");
+                    OnPropertyChanged(nameof(Description));
                 }
             }
         }
@@ -108,7 +110,7 @@ namespace TaskManager.ViewsModels
                 if (task.Status != value)
                 {
                     task.Status = value;
-                    OnPropertyChanged("Status");
+                    OnPropertyChanged(nameof(Status));
                 }
             }
         }
@@ -121,7 +123,7 @@ namespace TaskManager.ViewsModels
                 if (task.FileName != value)
                 {
                     task.FileName = value;
-                    OnPropertyChanged("FileName");
+                    OnPropertyChanged(nameof(FileName));
                 }
             }
         }
