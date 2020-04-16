@@ -102,7 +102,7 @@ namespace TaskManager.ViewsModels
                 if (Task.Title != value)
                 {
                     Task.Title = value;
-                    OnPropertyChanged("Title");
+                    OnPropertyChanged(nameof(Title));
                 }
             }
         }
@@ -114,7 +114,7 @@ namespace TaskManager.ViewsModels
                 if (Task.Description != value)
                 {
                     Task.Description = value;
-                    OnPropertyChanged("Description");
+                    OnPropertyChanged(nameof(Description));
                 }
             }
         }
@@ -126,7 +126,7 @@ namespace TaskManager.ViewsModels
                 if (Task.Status != value)
                 {
                     Task.Status = value;
-                    OnPropertyChanged("Status");
+                    OnPropertyChanged(nameof(Status));
                 }
             }
         }
@@ -138,7 +138,7 @@ namespace TaskManager.ViewsModels
                 if (Task.Created_by != value)
                 {
                     Task.Created_by = value;
-                    OnPropertyChanged("Created_by");
+                    OnPropertyChanged(nameof(Created_by));
                 }
             }
         }
@@ -150,7 +150,7 @@ namespace TaskManager.ViewsModels
                 if (Task.Image != value)
                 {
                     Task.Image = value;
-                    OnPropertyChanged("Image");
+                    OnPropertyChanged(nameof(Image));
                 }
             }
         }
@@ -162,7 +162,7 @@ namespace TaskManager.ViewsModels
                 if (Task.FileName != value)
                 {
                     Task.FileName = value;
-                    OnPropertyChanged("FileName");
+                    OnPropertyChanged(nameof(FileName));
                 }
             }
         }
@@ -174,7 +174,7 @@ namespace TaskManager.ViewsModels
                 if (comment.Field != value)
                 {
                     comment.Field = value;
-                    OnPropertyChanged("Field");
+                    OnPropertyChanged(nameof(Field));
                 }
             }
         }

@@ -46,7 +46,7 @@ namespace TaskManager.ViewsModels
                 if (user.Name != value)
                 {
                     user.Name = value;
-                    OnPropertyChanged("Name");
+                    OnPropertyChanged(nameof(Name));
                 }
             }
         }
@@ -58,7 +58,7 @@ namespace TaskManager.ViewsModels
                 if (user.Email != value)
                 {
                     user.Email = value;
-                    OnPropertyChanged("Email");
+                    OnPropertyChanged(nameof(Email));
                 }
             }
         }
@@ -70,7 +70,7 @@ namespace TaskManager.ViewsModels
                 if (user.Password != value)
                 {
                     user.Password = value;
-                    OnPropertyChanged("Password");
+                    OnPropertyChanged(nameof(Password));
                 }
             }
         }
