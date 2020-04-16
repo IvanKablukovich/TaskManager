@@ -41,8 +41,6 @@ namespace TaskManager
         }
         public IEnumerable<Comment> GetComments(int id)
         {
-            // conn.Table<Table_Users>().Where(L => L.Id == 2).Select(x=>x.User_Name);
-            //return database.Table<Comment>().ToList();
             return database.Table<Comment>().Where(i => i.IdTask == id).ToList();
         }
 
@@ -55,10 +53,6 @@ namespace TaskManager
         { 
             return database.Table<User>().Where(u => u.Name.Equals(Name) && u.Password.Equals(Password)).FirstOrDefault();
         }
-        //public Task GetItem(int id)
-        //{
-        //    return database.Get<Task>(id);
-        //}
         public int DeleteItem(int id)
         {
             return database.Delete<Task>(id);

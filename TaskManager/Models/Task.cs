@@ -17,7 +17,6 @@ namespace TaskManager.Models
         public string Created_by { get; set; }
         public string Image { get; set; }
         public string ImageName { get; set; }
-        //public byte[] File { get; set; }
         public string File { get; set; }
         public string FileName { get; set; }
         [OneToMany]

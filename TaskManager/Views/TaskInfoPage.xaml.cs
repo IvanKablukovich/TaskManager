@@ -24,10 +24,17 @@ namespace TaskManager.Views
             User = user;
             if (Task.Image!=null)
             {
+                xfImage.IsVisible = true;
                 byte[] Base64Stream = Convert.FromBase64String(Task.Image);
                 xfImage.Source = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
             }
-            //this.BindingContext = new TaskInfoViewModel(Task);
+            if (!String.IsNullOrEmpty(Task.File))
+
+            {
+
+                fileB.IsVisible = true;
+
+            }
         }
 
         protected override void OnAppearing()
@@ -35,39 +42,5 @@ namespace TaskManager.Views
             this.BindingContext = new TaskInfoViewModel(Task, User);
             base.OnAppearing();
         }
-
-  
-        //protected override void OnAppearing()
-        //{
-        //    var task = (Task)BindingContext;
-        //    //commentsList.ItemsSource = App.Database.GetComments();
-        //    commentsList.ItemsSource = App.Database.GetComments(task.TaskId);
-        //    base.OnAppearing();
-        //}
-
-        //private void DeleteTask(object sender, EventArgs e)
-        //{
-        //    var task = (Task)BindingContext;
-        //    //int x = task.TaskId;
-        //    App.Database.DeleteItem(task.TaskId);
-        //    this.Navigation.PopAsync();
-        //}
-
-        //private async void CreateComment(object sender, EventArgs e)
-        //{
-        //    Comment comment = new Comment();
-        //    CreateCommentPage commentPage = new CreateCommentPage();
-        //    commentPage.BindingContext = comment;
-        //    await Navigation.PushAsync(commentPage);
-        //}
-        //private void EditTask(object sender, EventArgs e)
-        //{
-        //    var task = (Task)BindingContext;
-        //    if (!String.IsNullOrEmpty(task.Title))
-        //    {
-        //        App.Database.SaveTask(task);
-        //    }
-        //    this.Navigation.PopAsync();
-        //}
     }
 }

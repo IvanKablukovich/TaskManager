@@ -23,22 +23,5 @@ namespace TaskManager.Views
 
             this.BindingContext = new SignUpViewModel();
         }
-        //private void Button_Clicked(object sender, EventArgs e)
-        //{
-        //    var email = EntryEmail.Text;
-        //    var emailCheck = "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$";
-
-
-        //    var user = (User)BindingContext;
-        //    if (!String.IsNullOrWhiteSpace(user.Name) && Regex.IsMatch(email, emailCheck))
-        //    {
-        //        App.Database.SaveItem(user);
-        //        App.Current.MainPage = new NavigationPage(new SignInPage());
-        //    }
-        //    else
-        //    {
-        //        var result = this.DisplayAlert("Oops", "Failed", "Ok", "Cancel");
-        //    }
-        //}
     }
 }

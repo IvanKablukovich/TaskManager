@@ -530,3 +530,4 @@ A:\Progs\VisualStudio\projects\TaskManager\TaskManager.Android\obj\Debug\90\andr
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager.Android\obj\Debug\90\android\assets\System.IO.Packaging.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
 A:\Progs\VisualStudio\projects\TaskManager\TaskManager.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.Xml.dll
+A:\Progs\VisualStudio\projects\TaskManager\TaskManager.Android\obj\Debug\90\res\drawable\logo.png

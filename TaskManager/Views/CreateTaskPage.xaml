@@ -31,8 +31,8 @@
             </Picker.Items>
         </Picker>
         <Button Text="Pick Image" Command="{Binding SelectImageCommand}" />
-        <!--<Button Text="Pick Document" Command="{Binding SelectFileCommand}" />-->
-        <!--<Label Text="{Binding ImageName}"/>-->
+        <Button Text="Pick Document" Command="{Binding SelectFileCommand}" />
+        <Label Text="{Binding FileName}"/>
         <StackLayout Orientation="Horizontal">
             <Button Text="Save" Command="{Binding SaveTaskCommand}" Style="{StaticResource buttonStyle}"/>
             <Button Text="Cancel" Command="{Binding BackCommand}" Style="{StaticResource buttonStyle}"/>

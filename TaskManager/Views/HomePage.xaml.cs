@@ -21,7 +21,6 @@ namespace TaskManager.Views
         {
             InitializeComponent();
             currentUser = user;
-            //this.BindingContext = new HomePageViewModel();
         }
 
         protected override void OnAppearing()
@@ -29,20 +28,6 @@ namespace TaskManager.Views
             this.BindingContext = new HomePageViewModel(currentUser);
             base.OnAppearing();
         }
-
-        //private async void CreateTask(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new CreateTaskPage());
-        //}
-
-        //private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    Task selectedTask = (Task)e.SelectedItem;
-        //    TaskInfoPage taskInfoPage = new TaskInfoPage();
-        //    taskInfoPage.BindingContext = selectedTask;
-        //    await Navigation.PushAsync(taskInfoPage);
-        //}
-
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new NavigationPage(new SignInPage());

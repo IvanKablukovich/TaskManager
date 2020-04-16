@@ -45,6 +45,5 @@ x:Class="TaskManager.Views.HomePage"
                 </StackLayout>
             </ListView.Footer>
         </ListView>
-        <!--<Image Source="pepeC.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>-->
     </StackLayout>
 </ContentPage>

@@ -35,18 +35,10 @@ namespace TaskManager.ViewsModels
 
         private void SignIn()
         {
-            //var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "User.db");
-            //var db = new SQLiteConnection(dbpath);
-
             var my = DBRepository.getInstance.CheckUser(Name, Password);
-            //var myquery = db.Table<User>().Where(u => u.Name.Equals(Name) && u.Password.Equals(Password)).FirstOrDefault();
 
             if (my != null)
             {
-                //var us = from Users in db.Table<User>()
-                //            where Users.Name.Equals(Name)
-                //            select Users;
-                //var userQuery = db.Query<User>("SELECT * FROM Users WHERE Name = ?", Name);
                 var userQuery = DBRepository.getInstance.GetUserByName(Name);
                 User currentUser = userQuery.ElementAt(0);
                 App.Current.MainPage = new NavigationPage(new HomePage(currentUser));
